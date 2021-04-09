@@ -46,6 +46,8 @@ namespace Calcolatrice
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -202,7 +204,7 @@ namespace Calcolatrice
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(136, 39);
             this.button15.TabIndex = 14;
-            this.button15.Text = "10";
+            this.button15.Text = "0";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -220,18 +222,39 @@ namespace Calcolatrice
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 166);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 96);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(278, 35);
+            this.richTextBox1.Size = new System.Drawing.Size(278, 43);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(196, 145);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(94, 56);
+            this.button17.TabIndex = 17;
+            this.button17.Text = "C";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(188, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "sciu sciu calculator";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -253,6 +276,7 @@ namespace Calcolatrice
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -275,6 +299,8 @@ namespace Calcolatrice
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Label label1;
     }
 }
 

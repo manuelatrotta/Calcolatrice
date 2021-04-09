@@ -161,12 +161,12 @@ namespace Calcolatrice
         {
             if (condizione == true)
             {
-                richTextBox1.Text = "" + 10;
+                richTextBox1.Text = "" + 0;
                 condizione = false;
             }
             else
             {
-                richTextBox1.Text += 10;
+                richTextBox1.Text += 0;
             }
         }
 
@@ -214,7 +214,6 @@ namespace Calcolatrice
                     n1 -= n2;
                     richTextBox1.Text = Convert.ToString(n1);
                     condizione = true;
-                    //riporto a zero n1 e n2 per evitare che ai successivi click di = si abbia la somam 
                     n1 = 0;
                     n2 = 0;
                     break;
@@ -224,7 +223,6 @@ namespace Calcolatrice
                     n1 *= n2;
                     richTextBox1.Text = Convert.ToString(n1);
                     condizione = true;
-                    //riporto a zero n1 e n2 per evitare che ai successivi click di = si abbia la somam 
                     n1 = 0;
                     n2 = 0;
                     break;
@@ -234,7 +232,6 @@ namespace Calcolatrice
                     n1 /= n2;
                     richTextBox1.Text = Convert.ToString(n1);
                     condizione = true;
-                    //riporto a zero n1 e n2 per evitare che ai successivi click di = si abbia la somam 
                     n1 = 0;
                     n2 = 0;
                     break;
@@ -324,6 +321,16 @@ namespace Calcolatrice
                 operazione = 4;
                 condizione = true;
 
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text != "")
+            {
+                n1 = 0;
+                richTextBox1.Text = Convert.ToString(n1);
+                condizione = true;
             }
         }
     }
