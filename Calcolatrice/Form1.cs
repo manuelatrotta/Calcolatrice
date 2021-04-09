@@ -208,6 +208,17 @@ namespace Calcolatrice
                     n1 = 0;
                     n2 = 0;
                     break;
+
+                case 2:
+                    n2 = Convert.ToDouble(richTextBox1.Text);
+                    n1 -= n2;
+                    richTextBox1.Text = Convert.ToString(n1);
+                    condizione = true;
+                    //riporto a zero n1 e n2 per evitare che ai successivi click di = si abbia la somam 
+                    n1 = 0;
+                    n2 = 0;
+                    break;
+
             }
         }
 
@@ -221,6 +232,30 @@ namespace Calcolatrice
             else
             {
                 richTextBox1.Text += ".";
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (n1 == 0)
+            {
+                if (richTextBox1.Text == "")
+                {
+                    richTextBox1.Text = "0";
+                }
+                n1 = Convert.ToDouble(richTextBox1.Text);
+                richTextBox1.Text = Convert.ToString(n1);
+                operazione = 2;
+                condizione = true;
+            }
+            else
+            {
+                n2 = Convert.ToDouble(richTextBox1.Text);
+                n1 -= n2;
+                richTextBox1.Text = Convert.ToString(n1);
+                operazione = 2;
+                condizione = true;
+
             }
         }
     }
